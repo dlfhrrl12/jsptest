@@ -1,0 +1,15 @@
+package service;
+
+import org.apache.logging.log4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import controller.BoardController;
+
+public class BoardServiceImpl implements BoardService {
+	private static final Logger log = LoggerFactory.getLogger(BoardServiceImple.class);
+	private BoardDAO bdao;
+	
+	public BoardServiceImpl() {
+		bdao = new BoardDAOImpl();
+	}
+}

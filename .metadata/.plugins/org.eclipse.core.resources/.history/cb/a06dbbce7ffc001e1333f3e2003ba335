@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<h1>MY JSP POST PAGE</h1>
+	
+	<table border="1">
+	<tr>
+		<th>bno</th>
+		<th>title</th>
+		<th>writer</th>
+		<th>regdate</th>
+	</tr>
+	<c:if test="${bvo.writer eq ses.id }">
+	<tr>
+		<th>${bvo.bno }</th>
+		<th> <a>${bvo.title }</a></th>
+		<th>${bvo.writer }</th>
+		<th>${bvo.regdate }</th>
+	</tr>
+	</c:if>
+	</table>
+	
+<a href="../index.jsp"><button type="button">index</button></a>
+
+
+</body>
+</html>
